@@ -9,14 +9,6 @@ using namespace std;
 #define rall(x) (x).rbegin(), (x).rend()
 #define exit return 0;
 
-void mekkawy()
-{
-    ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-}
 
 /*--------- start of recursive fibonacci implementation ---------- */
 
@@ -92,18 +84,36 @@ long long fibonacci_dp(long long n)
 
 /*------ end of dynamic programming fibonacci implementation ---- */
 
-void solve()
-{
-    cout << fibonacci_dp(9);
-}
-
 int main()
 {
-    mekkawy();
-    int t = 1;
-    // cin >> t;
-    while (t--)
+    cout << "Welcome To Fiboncci Series Calculator\n\n";
+    int n;
+    while (true)
     {
-        solve();
+        cout << "Chose Which Function Would you like to use\n\nEnter A Number From 1 to 4\n\n1-Recursive Fibonacci\n\n2-Matrix Multiplication Fiboncci\n\n3-DP Fibonacci\n\n4-exit\n\n";
+        int choice;
+        cin >> choice;
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter The Number You Would Like To Calculate Recursive Fibonacci For\n";
+            cin >> n;
+            cout << "fibonacci for number " << n << " is " << fibonacci_matrix_mult(n) << "\n\n-----------------------------------------\n";
+            break;
+        case 2:
+            cout << "Enter The Number You Would Like To Calculate Matrix Multiplication Fibonacci For\n";
+            cin >> n;
+            cout << "fibonacci for number " << n << " is " << fibonacci_matrix_mult(n) << "\n\n-----------------------------------------\n";
+            break;
+        case 3:
+            cout << "Enter The Number You Would Like To Calculate DP Fibonacci For\n";
+            cin >> n;
+            cout << "fibonacci for number " << n << " is " << fibonacci_matrix_mult(n) << "\n\n-----------------------------------------\n";
+            break;
+
+        default:
+            return 0;
+            break;
+        }
     }
 }
