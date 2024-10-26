@@ -146,19 +146,19 @@ void HomeScreen(vector<Item> data) {
 int main()
 {
 
-    // vector<Item> data = ReadDataFromFiles();
-    // systemStatus = 1;
-    // while (systemStatus != -1)
-    // {
-    //     cout<< "-----Welcome------\n";
-    //     HomeScreen(data);
-    // }
+    vector<Item> data = ReadDataFromFiles();
+    systemStatus = 1;
+    while (systemStatus != -1)
+    {
+        cout<< "-----Welcome------\n";
+        HomeScreen(data);
+    }
 
     // you can use heapsort externally in you program as the following
-    vector<int> items {657, 600, 60 ,78 , 500 , 20 , 60 , 150};
-    vector<Item> sorted = heapSort(items);
-    for(int i = 0; i < sorted.size(); i++) {
-        cout << sorted[i].getvalue() << " ";
-    }
+    // vector<int> items {657, 600, 60 ,78 , 500 , 20 , 60 , 150};
+    // vector<Item> sorted = heapSort(items);
+    // for(int i = 0; i < sorted.size(); i++) {
+    //     cout << sorted[i].getvalue() << " ";
+    // }
     return 0;
 }
