@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Tree.cpp"
-#include "Maxheap.cpp"
+#include "PriorityQueue.cpp"
 #include <vector>
 #include <fstream>
 using namespace std;
@@ -30,7 +30,7 @@ vector<Item> ReadDataFromFiles(){
 }
 
 void useHeap(vector<Item> data){
-    if (HeapType != '1' && HeapType != '2')
+    if (HeapType != '2')
     {
         HeapType = '2';
         Maxheap_By_value = new MaxHeap("value", data);
@@ -160,5 +160,20 @@ int main()
     // for(int i = 0; i < sorted.size(); i++) {
     //     cout << sorted[i].getvalue() << " ";
     // }
+
+
+    // priority queue only integers not varadic
+    // Priority_Queue pq;
+    // pq.insert(5);
+    // pq.insert(20);
+    // pq.insert(30);
+    // pq.insert(35);
+    // pq.insert(150);
+
+    // while(!pq.empty()){
+    //     cout << pq.top() << " ";
+    //     pq.pop();
+    // }
+
     return 0;
 }
